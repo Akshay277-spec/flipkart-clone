@@ -1,0 +1,239 @@
+*,*::before,*::after{
+   
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    margin: 0; background-color: #eee;
+}
+
+.navbar{
+    display: flex;
+    /* border: 2px solid black; */
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+.nav-logo img{
+    height: 82px;
+}
+
+.search-bar{
+    display: flex;
+    flex-grow: 1;
+}
+.search-input{
+    width: 100%;
+    font-size: inherit;
+    padding: .4em;border: 1px solid #777;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: aliceblue;padding:6px;
+}
+
+.search-btn{
+    background-color: aliceblue;
+    border: none; border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+      cursor: pointer;padding:6px;
+}
+
+.menu-icons{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    gap:1.5rem;    margin-left: 10rem;
+}
+.menu-icons img{
+    width: 24px;
+    height: 24px;
+}
+.menu-icons a{
+    text-decoration: none;display: flex;
+    color: black;font-size: 1.1em;align-items: center;
+}
+
+@media screen and (max-width:1022px) and (min-width:695px)
+{
+    .menu-icons a p{
+        display: none;
+    }
+}
+
+@media screen and (max-width:695px)
+{
+    .menu-icons a {
+        display: none;
+    }
+    .navbar{
+       flex-direction: column;width: 100%;
+    }
+    .nav-logo img{
+        height:84px;
+    }
+    .search-bar {
+        margin-top: -18px;
+        margin-bottom: 6px;
+        width: 85%;
+        
+    }
+ 
+}
+    
+
+
+.shop-products{
+    display: grid;
+ overflow: hidden;
+ grid-template-columns: repeat(auto-fill,minmax(198px,1fr));
+ gap:0;
+ margin:1.5rem;
+ /* padding:3rem 0; */ 
+/* border:2px solid black ; */
+background-color: white;
+cursor: pointer;
+}
+
+.heading{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.5rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
+.prod-heading{
+    text-decoration: none;
+    color: black;
+}
+
+.heading-icon{
+    height:30px;
+    background-color: blue;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.shop-products-box{
+    border:1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.thumbnail{
+    display: flex;
+    position: relative;
+}
+
+.thumbnail-image{
+    width: 100%;
+    height: 100%;
+    min-width: 92px;
+    min-height: 92px;
+    background-color: #aaa;
+    margin:20px;
+}
+.thumbnail-image:hover{
+    scale: 1.1;
+}
+
+.thumbnail-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+.prod-name,.prod-price{
+    text-decoration: none;color: black;
+
+}
+.shop{
+    background-color: #ccc;
+}
+
+.image-panel{
+    
+    display: grid;margin:1.5rem;
+    /* grid-template-columns: repeat(auto-fill,minmax(100vw,1fr)); */
+    height:255px;overflow: hidden;
+    cursor: pointer;
+}
+.images{
+    width:100% ;
+    height: 255px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: change 15s ease-in-out infinite;
+    transition: all 15s;
+}
+@keyframes change {
+    0%{
+        background: url("1.jpg");
+    }
+    50%{
+        background: url("2.jpg");
+    }
+    100%{
+        background: url("3.jpg");
+    }
+    
+}
+.category-panel{
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(64px,1fr));
+    /* border: 2px solid black; */
+    margin: 1.5rem;gap: 2rem;
+    background-color: white;
+}
+.categories{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.cat-name{
+    text-decoration: none;
+    color: black;
+    margin-left: 12px;
+}
+.cat-img{
+   margin-left: 12px;
+}
+
+.foot-panel1{
+    display: flex;background-color: black;
+    border-bottom: 1px solid grey;
+}
+.foot-panel1 ul a{
+    text-decoration: none;
+    color: white;font-size: 12px;display: block;
+    padding-bottom: 6px;
+}
+.foot-panel1 ul h2{
+    text-decoration: none;
+    color: white;font-size: 12px;
+}
+.foot-panel2{
+    display: flex;background-color: black;
+    padding: 10px 0;
+}
+.pages a{
+    text-decoration: none;
+    color: white;font-size: 12px;
+    padding-right: 70px;
+    padding-left: 50px;
+}
+.copyright{
+    color: white;font-size: 12px;
+}
